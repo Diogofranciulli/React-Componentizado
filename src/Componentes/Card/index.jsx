@@ -3,10 +3,10 @@ export default function Card({data}) {
     return(
 <>
         {
-            data.map(skill =>(
-<div class="skill-card">
-                    <h3>{titulo}</h3>
-                    <p>{nivel}</p>
+            data.map((skill,index) =>(
+                <div class="skill-card" key={index}>
+                    <h3>{skill.titulo}</h3>
+                    <p>{skill.nivel}</p>
                 </div>
 
             ))
@@ -17,5 +17,3 @@ export default function Card({data}) {
 </>
     )
 }
-
-const {titulo, nivel} = props
